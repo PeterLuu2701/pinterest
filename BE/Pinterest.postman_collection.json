@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "36a95960-e125-45ad-aef1-8469649b1485",
+		"name": "Pinterest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23648943"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"User4\",\r\n    \"email\": \"user4@example.com\",\r\n    \"password\": \"password4\",\r\n    \"age\": 27,\r\n    \"avatar\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/signup",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user4@example.com\",\r\n    \"password\": \"password4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/auth/login",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Images",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTUzODIyNjgyOSwiaWF0IjoxNzA5NTM4MjI2LCJleHAiOjE3MDk1Mzg1MjZ9.jO_1gztsZSfqqD-3SwBjJyPB-GMNvpSxX8Ey0Usxzw8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/home/get-all-images",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"home",
+						"get-all-images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Images By Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTUzOTUzNjk1MywiaWF0IjoxNzA5NTM5NTM2LCJleHAiOjE3MDk1Mzk4MzZ9._RYvs_q_z645MjXgbsecyFlBSh0GmpSKigBV80LRAL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/home/find-images-by-name",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"home",
+						"find-images-by-name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image Detail By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/detail/get-image-detail-by-id/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"detail",
+						"get-image-detail-by-id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment By Picture",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/detail/get-comment-by-picture-id/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"detail",
+						"get-comment-by-picture-id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Save Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTU0Mjk4MDIzMiwiaWF0IjoxNzA5NTQyOTgwLCJleHAiOjE3MDk1NDMyODB9.GCTdYGvUrx1_QulB5ULW8nxPhKV2aT_Z9UegVANCdUI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/detail/get-saved/2",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"detail",
+						"get-saved",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTU0NDIwNDk4NSwiaWF0IjoxNzA5NTQ0MjA0LCJleHAiOjE3MDk1NDQ1MDR9.FE8cqEEnCV3QVknrUY8-nzJEyUmKY0dOeqvK4yfkjV8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"commentContent\": \"CommentTest\",\r\n    \"pictureId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/detail/comment",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"detail",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Saved Images By User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/get-saved-by-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-saved-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Created Images By User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/user/get-created-images-by-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"get-created-images-by-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pictureId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/delete-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"delete-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pictureName\": \"Picture 1 User 4\",\r\n    \"pictureUrl\": \"https://i.pinimg.com/564x/7e/b0/1a/7eb01ae56f1f024cb744426be298d598.jpg\",\r\n    \"pictureDescription\": \"Description of Picture 1 User 4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/upload-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImtleSI6MTcwOTYxOTY4MjgwNSwiaWF0IjoxNzA5NjE5NjgyLCJleHAiOjE3MDk2MTk5ODJ9.Hih2ID5c497RLMM0dSNU0dSNq0fx4q9MrbfYXHzI0R8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"userName\": \"User4 Updated\",\r\n    \"age\": \"\",\r\n    \"avatar\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/user/update-profile",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"user",
+						"update-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
